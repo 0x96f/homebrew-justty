@@ -7,7 +7,7 @@ cask "justty" do
   desc "Simple native macOS terminal"
   homepage "https://github.com/0x96f/justty"
 
-  depends_on macos: ">= :sequoia"
+  depends_on macos: :sequoia
 
   app "Justty.app"
 
