@@ -1,0 +1,24 @@
+cask "justty" do
+  version "0.3.1"
+  sha256 "faf5926b9020e2045f7da928c316a34dcbef5232d115364eb502e5ad23bb053c"
+
+  url "https://github.com/0x96f/justty/releases/download/v#{version}/Justty-macos.zip"
+  name "Justty"
+  desc "Simple native macOS terminal"
+  homepage "https://github.com/0x96f/justty"
+
+  depends_on macos: ">= :sequoia"
+
+  app "Justty.app"
+
+  # Self-signed / not notarized — clear Gatekeeper quarantine so first launch works.
+  postflight do
+    system_command "/usr/bin/xattr",
+                   args: ["-dr", "com.apple.quarantine", "#{appdir}/Justty.app"]
+  end
+
+  zap trash: [
+    "~/Library/Preferences/dev.justty.plist",
+    "~/Library/Saved Application State/dev.justty.savedState",
+  ]
+end
