@@ -1,6 +1,6 @@
 cask "justty" do
-  version "0.6.1"
-  sha256 "0073731048d2f13fb59e00cf64e1035dfa03d4a9c5734009dac361021ad936dc"
+  version "0.6.3"
+  sha256 "6fd8d7175a6c9cbc47ca395fddcc0368c151957e4c55ca19cc14896b89d2428a"
 
   url "https://github.com/0x96f/justty/releases/download/v#{version}/Justty-macos.zip"
   name "Justty"
