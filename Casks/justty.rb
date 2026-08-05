@@ -18,7 +18,7 @@ cask "justty" do
   end
 
   zap trash: [
-    "~/Library/Preferences/dev.justty.plist",
-    "~/Library/Saved Application State/dev.justty.savedState",
+    "~/Library/Preferences/dev.0x96f.justty.plist",
+    "~/Library/Saved Application State/dev.0x96f.justty.savedState",
   ]
 end
