@@ -12,9 +12,9 @@ cask "justty" do
   app "Justty.app"
 
   # Self-signed / not notarized — clear Gatekeeper quarantine so first launch works.
-  postflight do
-    system_command "/usr/bin/xattr",
-                   args: ["-dr", "com.apple.quarantine", "#{appdir}/Justty.app"]
+  postflight_steps do
+    run "/usr/bin/xattr",
+        args: ["-dr", "com.apple.quarantine", "{{appdir}}/Justty.app"]
   end
 
   zap trash: [
